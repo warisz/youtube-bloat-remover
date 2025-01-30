@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Bloat Blocker - Remove Shorts, Games, and more from YouTube",
+  "version": "1.0",
+  "description": "Blocks YouTube Shorts, Games, and Movie Ad panel from Youtube.",
+  "permissions": ["storage"],  
+  "action": {
+    "default_popup": "panel.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
